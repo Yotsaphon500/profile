@@ -49,14 +49,15 @@
                         <CSelect
                           v-model="date"
                           label="Date"
+                          placeholder="DD"
                           :options="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]"
-                          
                         />
                       </CCol>
                       <CCol sm="2">
                         <CSelect
                           v-model="month"
                           label="Month"
+                          placeholder="MM"
                           :options="[1,2,3,4,5,6,7,8,9,10,11,12]"
                         />
                       </CCol>
@@ -64,6 +65,7 @@
                         <CSelect
                           v-model="year"
                           label="Year"
+                          placeholder="YY"
                           :options="[1980,1981,1982,1983,1984,1985,1986,1987
                           ,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997
                           ,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007
@@ -119,7 +121,7 @@
                     :key="key"
                   >
                     <CCol :col="12 - number">
-                      <CSelect v-model="district" label="District" class="mb-0" :options="options"/>
+                      <CSelect v-model="district" label="District" placeholder="Please select" class="mb-0" :options="options"/>
                     </CCol>
                     <CCol :col="number">
                       <CSelect v-model="subDistrict" label="Sub-District" class="mb-0" placeholder="Please select" :options="options"/>
@@ -152,7 +154,7 @@
                       <CInput v-model="university" label="University" class="mb-0"/>
                     </CCol>
                     <CCol :col="number">
-                      <CInput v-model="school" label="Faculity/School" class="mb-0" placeholder="Please select" :options="options"/>
+                      <CInput v-model="school" label="Faculity/School" class="mb-0" :options="options"/>
                     </CCol>
                   </CRow>
                 </div>
